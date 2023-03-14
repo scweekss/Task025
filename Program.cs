@@ -1,28 +1,28 @@
-internal class Program
+// Задача 25: Напишите цикл, который 
+// принимает на вход два числа (A и B) и 
+// возводит число A в натуральную степень B.
+
+// 3, 5 -> 243 (3⁵)
+
+// 2, 4 -> 16
+
+int A = ReadInt("Введите первое число:");
+int B = ReadInt("Введите второе число:");
+
+ToDegree(A, B);
+
+void ToDegree(int a, int b)
 {
-    private static void Main(string[] args)
+    int result = 1;
+    for (int i = 1; i <= b; i++)
     {
-        Console.Write("Введите число ");
-
-        int number = Convert.ToInt32(Console.ReadLine()!);
-
-        int sum(int number)
-
-        {
-            int count = Convert.ToString(number).Length;
-            int a = 0;
-            int result = 0;
-
-            for (int i = 0; i < count; i++)
-            {
-                a = number - number % 10;
-                result = result + (number - a);
-                number = number / 10;
-            }
-            return result;
-        }
-
-        int sumNumber = sum(number);
-        Console.WriteLine("Сумма цифр в числе: " + sumNumber);
+        result = result * a;
     }
+    Console.WriteLine(result);
+}
+ 
+ int ReadInt(string message)
+{
+    Console.WriteLine(message);
+    return Convert.ToInt32(Console.ReadLine());
 }
